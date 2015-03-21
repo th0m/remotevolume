@@ -1,0 +1,10 @@
+<html>
+<script>
+    var http = new XMLHttpRequest();
+    function volumeup(){ http.open('GET', '/volumeup', false); }
+    function volumedown(){ http.open('GET', '/volumedown', false); }
+</script>
+<h1>remotevolume</h1>
+<button onclick='volumeup()'>Up</button>
+<button onclick='volumedown()'>Down</button>
+</html>
