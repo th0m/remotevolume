@@ -1,9 +1,10 @@
 <html>
-<script>
-    var http = new XMLHttpRequest();
-    function volume(type){ http.open('GET', '/'+type); http.send(); }
-</script>
-<h1>remotevolume</h1>
-<button onclick='volume("up")'>Up</button>
-<button onclick='volume("down")'>Down</button>
+    <head>
+        <title>remotevolume</title>
+    </head>
+    <body>
+        <h1>remotevolume</h1>
+        <a href='/up'>Up</a>
+        <a href='/down'>Down</a>
+    </body>
 </html>

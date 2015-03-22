@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 from subprocess import call
 app = Flask(__name__)
 
@@ -9,12 +9,12 @@ def home():
 @app.route('/up')
 def up():
     call(['pactl', 'set-sink-volume', '1', '+10%'])
-    return 'OK'
+    return render_template('home.html.tmpl')
     
 @app.route('/down')
 def down():
     call(['pactl', 'set-sink-volume', '1', '-10%'])
-    return 'OK'
+    return render_template('home.html.tmpl')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
