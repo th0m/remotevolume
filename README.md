@@ -1,3 +1,3 @@
 # remotevolume
 
-Controlling my sound card volume from my smartphone
+Lazy hack to control the computer volume from my smartphone
